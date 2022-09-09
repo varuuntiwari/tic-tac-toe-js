@@ -1,2 +1,2 @@
 # tic-tac-toe-js
-Tic Tac Toe made in JS
+tic tac toe with no fancy methods or features
