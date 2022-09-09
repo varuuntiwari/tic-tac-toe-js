@@ -29,20 +29,26 @@ function lineMatch(s) {
         pattern.push(box.innerText)
     })
     // Horizontal match
-    for(let i=0; i < 7; i++) {
+    for(let i=0; i < 7; i+=3) {
         if(pattern[i] === s && pattern[i+1] === s && pattern[i+2] === s) {
+            console.log("Horizontal match:")
+            console.log(pattern)
             return true
         }
     }
     // Vertical match
     for(let i=0; i < 3; i++) {
         if(pattern[i] === s && pattern[i+3] === s && pattern[i+6] === s) {
+            console.log("Vertical match:")
+            console.log(pattern)
             return true
         }
     }
     // Diagonal match
     if((pattern[0] === s && pattern[4] === s && pattern[8] === s) ||
         (pattern[2] === s && pattern[4] === s && pattern[6] === s)) {
+            console.log("Diagonal match:")
+            console.log(pattern)
             return true
     }
     // Keeps giving true and alert statement
